@@ -7,6 +7,7 @@ layout: default
 </section>
 <section class="meta">
 <hr/>
+<!-- 
 <span class="author">
   <a href="http://blog.sevenche.com">{{ site.author }}</a> - 程序员，近10年工作经验集中在Java, Android, C++，现就职于上海。
 </span>
@@ -14,6 +15,7 @@ layout: default
 <span class="license">
   Published under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">(CC) BY-NC-SA</a>
 </span>
+-->
 {% if page.categories %}
 <span class="categories">
   in categories
@@ -81,7 +83,7 @@ $(window).load(function() {
         img.height = newht;
         img.width  = newwt;
         $(img).wrap('<table><tr><td class="tborder"><div class="resized_image"><a href="' + img.src + '" target="_blank"></a></div></td></tr></table>');
-        $(img).parent().before('<p>NOTE: This image was resized. To view it full-size, click on the image.</p>');
+        $(img).parent().before('');
         //$(img).parent().after('<p style="text-align:right;background:none;margin:0;padding-right:3px">Image resizing script by <a href="http://aetus.net/217/programming/automatically-resize-large-images-with-javascript/">Aetus Designs</a>.</p>');
       };
       
