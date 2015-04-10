@@ -2,14 +2,14 @@
 layout: post
 title: 为什么需要Monad?
 categories:
-- prog 
-tags:
 - prog
+tags:
+- monad,haskell
 ---
 
 [原文链接](http://www.jdon.com/46884)
 
-这篇[Motivation for Monads](http://cs.coloradocollege.edu/~bylvisaker/MonadMotivation/)其实谈了为什么需要函数编程和Monad？指出函数编程的几个特点，与面向过程编程的本质区别，如不能抛出Exception等，从而导出为什么使用Monad的动机原因。
+> 这篇[Motivation for Monads](http://cs.coloradocollege.edu/~bylvisaker/MonadMotivation/)其实谈了为什么需要函数编程和Monad？指出函数编程的几个特点，与面向过程编程的本质区别，如不能抛出Exception等，从而导出为什么使用Monad的动机原因。
 
 这不是一篇monad教程，介绍monad的文章已经有很多了，这些文章只是解释了什么是Monad以及Monad是如何工作的(What和How)，这里只想解释为什么使用Monad？(Why)
 
