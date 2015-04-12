@@ -15,14 +15,14 @@ erl -name li@server1.com
 erl -name li@10.68.8.50
 ```
 
-*-sname*设置**短名字**。例如:
+用*-sname*设置**短名字**。例如:
 
 ```
 erl -sname li@server1
 erl -sname li    
 ```
 
-注意，**短名字**后面跟的域名不能是IP，也不能够带有```.```，比如不能是```server1.com```，而只能是```server1```。
+注意:**短名字**后面跟的域名不能是IP，也不能够带有```.```，比如不能用```server1.com```。
 
 #### 用法
 
