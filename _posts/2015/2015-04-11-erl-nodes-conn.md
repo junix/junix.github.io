@@ -6,14 +6,14 @@ categories:
 tags:
 - erlang
 ---
-### LONG NAME和SHORT NAME的设置
+### *LONG NAME*和*SHORT NAME*的设置
 举例来说，
 
 ```
 erl -name li@Server1.com    
 erl -name li@10.68.8.50
 ```
-这是设置*LONG NAME*，用**-name**设置。
+这是设置*LONG NAME*，用*-name*设置。
 
 而如果使用:
 
@@ -21,15 +21,15 @@ erl -name li@10.68.8.50
 erl -sname li@Server1
 erl -sname li    
 ```
-这是设置*SHORT NAME*，用**-sname**设置。
+这是设置*SHORT NAME*，用*-sname*设置。
 
 从格式上来说，*SHORT NAME*后面跟的域名不能是IP，也不能够带有```.```，比如不能是```Server1.com```，而只能是```Server1```。
 
 从用法上来说：
 
-1. 如果两个节点运行在一个机器上，就用```-sname```; 
-2. 如果两个节点运行在不同的机器上，且两个机器运行在不同的网段，那么必须用```-name```，erlang会通过DNS解析出名字中的域名，找到对应的机器。
-3. 如果两个节点运行在不同的机器上，但两个机器在同一个子网中，那么可以和上面一样用```-name```方式，也可以用```-sname```，但是必须保证**sname的名字在/etc/hosts中**。比如,如果使用了```erl -name li@Server1```，则在```/etc/hosts```中需要添加```Server1 10.68.8.51```。总而言之，**如果需要用到DNS，那么必须使用LONG NAME，如果不需要用到DNS，可以使用sname，但需要设置/etc/hosts**。
+1. 如果两个节点运行在一个机器上，就用*-sname*；
+2. 如果两个节点运行在不同的机器上，且两个机器运行在不同的网段，那么必须用*-name*，erlang会通过DNS解析出名字中的域名，找到对应的机器；
+3. 如果两个节点运行在不同的机器上，但两个机器在同一个子网中，那么可以和上面一样用*-name*方式，也可以用*-sname*，但是必须保证**sname的名字在/etc/hosts中**。比如,如果使用了```erl -name li@Server1```，则在```/etc/hosts```中需要添加```Server1 10.68.8.51```。总而言之，**如果需要用到DNS，那么必须使用LONG NAME，如果不需要用到DNS，可以使用sname，但需要设置/etc/hosts**。
 
 
 了解了LONG NAME和SHORT NAME的区别，下面的部分就容易了。以书中的代码为例，
