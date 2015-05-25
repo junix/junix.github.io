@@ -1,6 +1,6 @@
 ---
 layout: post
-title: diff and pathch
+title: diff and patch
 categories:
 - erlang
 tags:
@@ -19,7 +19,7 @@ $ diff -Nru dir1 dir2 > x.pathc
 
 ```
 $ cd dir2
-$ pathch -R -p1 < x.pathch
+$ patch -R -p1 < x.patch
 ```
 
 
