@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Diff and pathc
+title: diff and pathch
 categories:
 - erlang
 tags:
@@ -28,7 +28,7 @@ $ pathch -R -p1 < x.pathch
 单个文件
 
 ```
-diff –uN  from-file  to-file  >to-file.patch
+diff –uN from-file to-file > to-file.patch
 patch –p0 < to-file.patch
 patch –RE –p0 < to-file.patch
 ```
@@ -36,7 +36,7 @@ patch –RE –p0 < to-file.patch
 多个文件
 
 ```
-diff –uNr  from-docu  to-docu >to-docu.patch
+diff –uNr from-docu to-docu  > to-docu.patch
 patch –p1 < to-docu.patch
-patch –R –p1 <to-docu.patch>>>
+patch –R –p1 < to-docu.patch
 ```
