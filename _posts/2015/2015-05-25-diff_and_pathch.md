@@ -11,7 +11,7 @@ tags:
 ## 使用diff制作补丁
 
 ```
-$ diff -Nru dir1 dir2 > x.pathc
+$ diff -Nru dir1 dir2 > x.patch
 ```
 
 ## 打补丁
