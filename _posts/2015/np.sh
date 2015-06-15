@@ -4,15 +4,26 @@
 pdir="/Users/junix/junix.github.io/_posts/2015"
 post_name()
 {
-        # echo -e $(find $pdir -iregex ".*/....-..-..-$1.md")
-        # echo -e "vv"
-        # for cadidator in $(find $pdir -iregex ".*/....-..-..-$1.md"); do
-        #         echo $cadidator
-        # done
-        # exit 1
         dateprefix=$(date "+%Y-%m-%d")
         name=$1
-        echo $pdir/${dateprefix}-${name}.md
+        post=$pdir/${dateprefix}-${name}.md
+
+        for cadidator in $(find $pdir -iregex ".*/....-..-..-$1.md"); do
+             post=$cadidator
+        done
+        echo $post
+}
+
+
+edit()
+{
+        vim $1 +3
+        cdir=$(pwd)
+        cd $pdir
+        git add $pdir/*
+        git commit -m "modify new post [$1]"
+        git push
+        cd $cdir
 }
 
 if [[ $# -ne 1 ]];then
@@ -20,17 +31,10 @@ if [[ $# -ne 1 ]];then
         exit 1
 fi
    
-
 postname=$(post_name $1)
 if [ ! -e $postname ]; then
-        cp $pdir/template $postname
+    cp $pdir/template $postname
 fi
 
+edit $postname
 
-vim $postname +3
-cdir=$(pwd)
-cd $pdir
-git add $pdir/*
-git commit -m "modify new post [$1]"
-git push
-cd $cdir
