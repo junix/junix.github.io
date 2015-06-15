@@ -4,6 +4,9 @@
 pdir="/Users/junix/junix.github.io/_posts/2015"
 post_name()
 {
+        for cadidator in $(find $pdir -iregex ".*/....-..-..-$1.md"); do
+                echo $cadidator
+        done
         dateprefix=$(date "+%Y-%m-%d")
         name=$1
         echo $pdir/${dateprefix}-${name}.md
