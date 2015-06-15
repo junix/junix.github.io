@@ -7,6 +7,7 @@ post_name()
         for cadidator in $(find $pdir -iregex ".*/....-..-..-$1.md"); do
                 echo $cadidator
         done
+        exit 1
         dateprefix=$(date "+%Y-%m-%d")
         name=$1
         echo $pdir/${dateprefix}-${name}.md
