@@ -4,6 +4,8 @@
 pdir="/Users/junix/junix.github.io/_posts/2015"
 post_name()
 {
+        echo -e $(find $pdir -iregex ".*/....-..-..-$1.md")
+        echo -e "vv"
         for cadidator in $(find $pdir -iregex ".*/....-..-..-$1.md"); do
                 echo $cadidator
         done
