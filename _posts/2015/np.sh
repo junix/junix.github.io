@@ -20,4 +20,11 @@ if [ ! -e $postname ]; then
         cp $pdir/template $postname
 fi
 
+
 vim $postname +3
+cdir=$(pwd)
+cd $pdir
+git add $pdir/*
+git commit -m "modify new post [$1]"
+git push
+cd $cdir
