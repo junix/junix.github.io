@@ -17,7 +17,7 @@ post_name()
 
 edit()
 {
-        vim $1 +3
+        gvim $1 +3
         cdir=$(pwd)
         cd $pdir
         git add $pdir/*
