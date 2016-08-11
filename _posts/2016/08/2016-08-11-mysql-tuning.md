@@ -31,20 +31,8 @@ MEM ==[write]==> FILE ==[sync]==> DISK
 
 `innodb_flush_log_at_trx_commit` 参数解释：
 
-`0`（延迟写）： 
-
-```
-MEM ==[1s]==> FILE ====> DISK
-```
-
-`1`（实时写，实时刷）： 
-
-```
-MEM ====> FILE ====> DISK
-```
-
-`2`（实时写，延迟刷）：
-
-```
-MEM ====> FILE ==[1s]==> DISK
-```
+| 值  | 意义           | 流程                          |
+| :-- | :--            | :--                           |
+| `0` | 延迟写         | MEM ==[1s]==> FILE ====> DISK |
+| `1` | 实时写，实时刷 | MEM ====> FILE ====> DISK     |
+| `2` | 实时写，延迟刷 | MEM ====> FILE ==[1s]==> DISK |
